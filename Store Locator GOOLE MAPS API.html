@@ -15,12 +15,100 @@
 }
 
 </style>
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  text-align: center;
+  background-color: #f1f1f1;
+}
+</style>
+</head>
+<body>
+
+<p>ADVATECH OFFICE SUPPLIES LTD APPROVED RESELLER LIST</p>
+
+<div class="row">
+  <div class="column">
+    <div class="card">
+		<p><a href="https://goo.gl/maps/a2DKj2B5FQ74Aw5DA">Advatech Office supplies- Westlands</a></p>
+		<p><a href="https://goo.gl/maps/XfeoUJvXKbbu8XPz9">Multitech Solutions- Kisumu</a></p>
+		<p><a href="https://goo.gl/maps/a2DKj2B5FQ74Aw5DA">AUM Traders- Westlands</a></p>
+		<p><a href="https://goo.gl/maps/hCM6dXYrtAJj23rh7">Techbiz Limited- Mombasa</a></p>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+		<p><a href="https://goo.gl/maps/z34W5KtUFTUSCumw5">ATTAIN ENTERPRISES LTD - Nrb.</a></p>
+		<p><a href="https://goo.gl/maps/Dy1Dmifnx2fD6WAN6">DATACHIP LTD-  Westlands</a></p>
+		<p><a href="https://goo.gl/maps/JNjWApf4KDyJwPmCA">Gravity Solutions Ltd, Nairobi</a></p>
+		<p><a href="https://goo.gl/maps/k26AWR5kNj5C6Rf88">Multitech Solutions (K) Ltd., Kisumu</a></p>
+    </div>
+  </div>
+  
+  <div class="column">
+    <div class="card">
+		<p><a href="hhttps://goo.gl/maps/FRFMD8Gk4bkCAfoh9">Pillar Technologies Limited, Nairobi</a></p>
+		<p><a href="https://goo.gl/maps/TUTvqziQLUPV27iP7">Remifam Systems Ltd, Kisumu</a></p>
+		<p><a href="https://g.page/reqtech-systems-solutions-ltd?share">Reqtech Systems & Solutions Ltd</a></p>
+		<p><a href="https://goo.gl/maps/X1vFtxAWzPVww4L56">Datalink Technologies Ltd, Nairobi</a></p>
+    </div>
+  </div>
+  
+</div>
+
+</body>
+</html>
 
 </head>
 <body>
 
+
+	<br>
 <!-- this div will hold your map -->
 <div id="map"></div>
+
+
 
 <!-- this div will hold your store info -->
 <div id="info_div"></div>
@@ -35,6 +123,18 @@ function initMap() {
 		zoom: 6.85
 	});
 
+//   card.setAttribute('id', 'pac-card');
+//   title.setAttribute('id', 'title');
+//   title.textContent = 'Find the nearest store';
+//   titleBar.appendChild(title);
+//   container.setAttribute('id', 'pac-container');
+//   input.setAttribute('id', 'pac-input');
+//   input.setAttribute('type', 'text');
+//   input.setAttribute('placeholder', 'Enter an address');
+//   container.appendChild(input);
+//   card.appendChild(titleBar);
+//   card.appendChild(container);
+//   map.controls[google.maps.ControlPosition.TOP_RIGHT].push(card);
 
 	function markStore(storeInfo){
 
@@ -135,8 +235,10 @@ function initMap() {
 	stores.forEach(function(store){
 		markStore(store);
 	});
+	
 
 }
+
 </script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyByoqITi9_dvLLlYSxEgThDTQZ4Vdi8IBA&callback=initMap" async defer></script>
 </body>
